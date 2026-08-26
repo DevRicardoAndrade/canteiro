@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canteiro — construtor de landing pages</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <span class="brand-mark">▚</span>
+    <span class="brand-name">Canteiro</span>
+    <span class="brand-tag">construtor de landing pages</span>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn btn-ghost" id="btn-clear">Limpar tudo</button>
+    <button class="btn btn-ghost" id="btn-preview">Pré-visualizar</button>
+    <button class="btn btn-primary" id="btn-export">Baixar site (.html)</button>
+  </div>
+</header>
+
+<div class="workbench">
+
+  <!-- LEFT: block palette -->
+  <aside class="palette">
+    <div class="palette-head">
+      <span class="palette-eyebrow">01 — MATERIAIS</span>
+      <h2>Blocos</h2>
+      <p>Arraste um bloco até a página, ou toque nele para adicionar.</p>
+    </div>
+    <div class="palette-list" id="palette-list">
+      <!-- populated by JS -->
+    </div>
+  </aside>
+
+  <!-- CENTER: canvas -->
+  <main class="canvas-wrap">
+    <div class="canvas-eyebrow">02 — PÁGINA <span id="canvas-count">(0 blocos)</span></div>
+    <div class="canvas-sheet" id="canvas">
+      <div class="canvas-empty" id="canvas-empty">
+        <span class="empty-mark">＋</span>
+        <p>Sua página está vazia.<br>Adicione o primeiro bloco pela lista à esquerda.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- RIGHT: inspector -->
+  <aside class="inspector" id="inspector">
+    <div class="palette-head">
+      <span class="palette-eyebrow">03 — AJUSTES</span>
+      <h2>Inspetor</h2>
+      <p id="inspector-hint">Selecione um bloco na página para editar.</p>
+    </div>
+    <div class="inspector-body" id="inspector-body"></div>
+  </aside>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="blocks.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
